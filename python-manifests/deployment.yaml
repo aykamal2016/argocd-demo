@@ -10,7 +10,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: ptechtrends
+      app: techtrends
   strategy:
     rollingUpdate:
       maxSurge: 25%
