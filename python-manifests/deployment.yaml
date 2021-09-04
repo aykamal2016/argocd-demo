@@ -3,14 +3,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: python-helloworld
-  name: python-helloworld
+    app: techtrends
+  name: techtrends
   namespace: default 
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: python-helloworld
+      app: ptechtrends
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -19,12 +19,12 @@ spec:
   template:
     metadata:
       labels:
-        app: python-helloworld
+        app: techtrends
     spec:
       containers:
-      - image: pixelpotato/python-helloworld:v1.0.0 
+      - image: aykamal/techtrends:v1
         imagePullPolicy: IfNotPresent
-        name: python-helloworld
+        name: techtrends
         resources:
           requests:
             cpu: 50m
